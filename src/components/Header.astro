@@ -1,5 +1,5 @@
 ---
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
 
 <nav class="flex justify-between items-center w-full mx-auto mt-4">
