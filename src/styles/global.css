@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer components {
+    .title {
+        @apply text-5xl font-bold tracking-tight;
+    }
+    .body {
+        @apply text-base leading-relaxed;
+    }
+    .subheadline {
+        @apply text-xl leading-relaxed;
+    }
+}

@@ -1,0 +1,46 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="flex justify-between items-center w-full mx-auto mt-4">
+    <div class="text-amber-400 font-bold">My Portfolio</div>
+
+    <ul class="flex gap-6">
+        <li>
+            <a
+                href="/"
+                class={
+                    currentPath === "/"
+                        ? "text-zinc-300 opacity-50 cursor-default"
+                        : "text-zinc-300 hover:text-white"
+                }
+            >
+                Start
+            </a>
+        </li>
+        <li>
+            <a
+                href="/projects"
+                class={
+                    currentPath === "/projects"
+                        ? "text-zinc-300 opacity-50 cursor-default"
+                        : "text-zinc-300 hover:text-white"
+                }
+            >
+                Projects
+            </a>
+        </li>
+        <li>
+            <a
+                href="/contact"
+                class={
+                    currentPath === "/contact"
+                        ? "text-zinc-300 opacity-50 cursor-default"
+                        : "text-zinc-300 hover:text-white"
+                }
+            >
+                Contact
+            </a>
+        </li>
+    </ul>
+</nav>

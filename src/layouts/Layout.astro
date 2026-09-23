@@ -1,0 +1,26 @@
+---
+// src/layouts/Layout.astro
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{title}</title>
+        <style is:global>
+            @import "tailwindcss";
+        </style>
+    </head>
+
+    <body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col items-center p-6">
+        <Header />
+    </body>
+    <slot />
+    <Footer />
+</html>
