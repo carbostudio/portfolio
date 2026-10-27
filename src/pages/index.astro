@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ProjectModal from "../components/ProjectModal.astro";
 ---
 
 <Layout>
@@ -35,20 +36,17 @@ import Footer from "../components/Footer.astro";
         </section>
 
         <!-- Introduction -->
-        <!-- Conserva aquí el bloque original de "Hi, I'm Roberto Carbonell"
-         con sus colores, tipografías y diagramación originales. -->
-
         <section class="flex justify-center px-6 pt-8 min-[700px]:pt-12 min-[1200px]:pt-20">
             <div class="text-center">
-                <h1 class="text-2xl min-[700px]:text-4xl min-[1200px]:text-5xl font-bold">
+                <h1 class="text-2xl font-bold min-[700px]:text-4xl min-[1200px]:text-6xl">
                     Hi, I'm <span class="text-cyan-400">Roberto Carbonell</span>
                 </h1>
 
-                <h2 class="text-sm min-[700px]:text-lg min-[1200px]:text-2xl font-bold">
+                <h2 class="text-sm font-bold min-[700px]:text-lg min-[1200px]:text-3xl">
                     Motion Designer, 3D Artist &amp; Creative Developer.
                 </h2>
 
-                <p class="mt-1 text-[10px] min-[700px]:text-sm text-zinc-400">
+                <p class="mt-2 text-xs text-zinc-400 min-[700px]:text-sm min-[1200px]:text-base">
                     I create motion, 3D and interactive visual experiences,
                     <br />
                     combining design, technology and storytelling.
@@ -57,8 +55,10 @@ import Footer from "../components/Footer.astro";
         </section>
 
         <!-- Selected Works -->
-        <section class="mx-auto w-[calc(100%-48px)] max-w-[1100px] pt-12 min-[700px]:pt-20">
-            <h2 class="titles-mono text-sm text-accent">Selected Works</h2>
+        <section class="mx-auto w-[calc(100%-48px)] max-w-[1100px] pt-12 min-[700px]:pt-20 min-[1200px]:max-w-[1200px]">
+            <h2 class="titles-mono text-sm text-accent min-[1200px]:text-base">
+                Selected Works
+            </h2>
             <div class="mt-3 border-b border-zinc-800"></div>
 
             <div
@@ -70,10 +70,10 @@ import Footer from "../components/Footer.astro";
                         data-project="google-flow"
                         class="cursor-pointer border-b border-zinc-800 py-4"
                     >
-                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                        <h3 class="inter-medium text-base min-[700px]:text-lg min-[1200px]:text-xl">
                             Google Flow Ads
                         </h3>
-                        <p class="mt-1 text-sm text-zinc-400">
+                        <p class="mt-1 text-sm text-zinc-400 min-[1200px]:text-base">
                             Motion Design &amp; Animation
                         </p>
                     </article>
@@ -82,10 +82,10 @@ import Footer from "../components/Footer.astro";
                         data-project="batman"
                         class="cursor-pointer border-b border-zinc-800 py-4"
                     >
-                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                        <h3 class="inter-medium text-base min-[700px]:text-lg min-[1200px]:text-xl">
                             Batman Sagas
                         </h3>
-                        <p class="mt-1 text-sm text-zinc-400">
+                        <p class="mt-1 text-sm text-zinc-400 min-[1200px]:text-base">
                             Motion Design &amp; Compositing
                         </p>
                     </article>
@@ -94,10 +94,10 @@ import Footer from "../components/Footer.astro";
                         data-project="kubrick"
                         class="cursor-pointer border-b border-zinc-800 py-4"
                     >
-                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                        <h3 class="inter-medium text-base min-[700px]:text-lg min-[1200px]:text-xl">
                             Kubrick Screenings
                         </h3>
-                        <p class="mt-1 text-sm text-zinc-400">
+                        <p class="mt-1 text-sm text-zinc-400 min-[1200px]:text-base">
                             Design &amp; Animation
                         </p>
                     </article>
@@ -108,20 +108,22 @@ import Footer from "../components/Footer.astro";
                         data-project="universal"
                         class="cursor-pointer border-b border-zinc-800 py-4"
                     >
-                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                        <h3 class="inter-medium text-base min-[700px]:text-lg min-[1200px]:text-xl">
                             Universal Chicago
                         </h3>
-                        <p class="mt-1 text-sm text-zinc-400">Motion Design</p>
+                        <p class="mt-1 text-sm text-zinc-400 min-[1200px]:text-base">
+                            Motion Design
+                        </p>
                     </article>
 
                     <article
                         data-project="christmas"
                         class="cursor-pointer border-b border-zinc-800 py-4"
                     >
-                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                        <h3 class="inter-medium text-base min-[700px]:text-lg min-[1200px]:text-xl">
                             Christmas E!
                         </h3>
-                        <p class="mt-1 text-sm text-zinc-400">
+                        <p class="mt-1 text-sm text-zinc-400 min-[1200px]:text-base">
                             Branding &amp; Animation
                         </p>
                     </article>
@@ -130,10 +132,10 @@ import Footer from "../components/Footer.astro";
                         data-project="planetarium"
                         class="cursor-pointer border-b border-zinc-800 py-4"
                     >
-                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                        <h3 class="inter-medium text-base min-[700px]:text-lg min-[1200px]:text-xl">
                             Humboldt Planetarium
                         </h3>
-                        <p class="mt-1 text-sm text-zinc-400">
+                        <p class="mt-1 text-sm text-zinc-400 min-[1200px]:text-base">
                             Design &amp; Motion Graphics
                         </p>
                     </article>
@@ -143,7 +145,7 @@ import Footer from "../components/Footer.astro";
             <div class="mt-6">
                 <a
                     href="/work"
-                    class="inline-block text-sm text-accent transition-opacity hover:opacity-70"
+                    class="inline-block text-sm text-accent transition-opacity hover:opacity-70 min-[1200px]:text-base"
                 >
                     All Work →
                 </a>
@@ -151,14 +153,14 @@ import Footer from "../components/Footer.astro";
         </section>
 
         <!-- Capabilities & Tools -->
-        <section class="mx-auto w-[calc(100%-48px)] max-w-[1100px] pt-12 min-[700px]:pt-20">
+        <section class="mx-auto w-[calc(100%-48px)] max-w-[1100px] pt-12 min-[700px]:pt-20 min-[1200px]:max-w-[1200px]">
             <div class="grid grid-cols-1 gap-y-8 min-[700px]:grid-cols-2 min-[700px]:gap-x-20">
                 <div>
-                    <h2 class="titles-mono text-sm text-accent">
+                    <h2 class="titles-mono text-sm text-accent min-[1200px]:text-base">
                         Capabilities
                     </h2>
 
-                    <ul class="mt-4 space-y-2 text-sm min-[700px]:text-base">
+                    <ul class="mt-4 space-y-2 text-sm min-[700px]:text-base min-[1200px]:text-lg">
                         <li>Motion Design</li>
                         <li>3D &amp; Animation</li>
                         <li>Compositing</li>
@@ -168,9 +170,11 @@ import Footer from "../components/Footer.astro";
                 </div>
 
                 <div class="text-left min-[700px]:text-right">
-                    <h2 class="titles-mono text-sm text-accent">Tools</h2>
+                    <h2 class="titles-mono text-sm text-accent min-[1200px]:text-base">
+                        Tools
+                    </h2>
 
-                    <ul class="mt-4 space-y-2 text-sm min-[700px]:text-base">
+                    <ul class="mt-4 space-y-2 text-sm min-[700px]:text-base min-[1200px]:text-lg">
                         <li>After Effects / Blender / Photoshop</li>
                         <li>Illustrator / Figma / HTML / CSS</li>
                         <li>Astro / JavaScript</li>
@@ -180,7 +184,7 @@ import Footer from "../components/Footer.astro";
         </section>
 
         <!-- About & Contact -->
-        <section class="mx-auto mt-16 w-[calc(100%-48px)] max-w-[1100px] pb-12 min-[700px]:mt-24 min-[700px]:pb-20">
+        <section class="mx-auto mt-16 w-[calc(100%-48px)] max-w-[1100px] pb-12 min-[700px]:mt-24 min-[700px]:pb-20 min-[1200px]:max-w-[1200px]">
             <div class="flex flex-col items-center gap-5 text-center min-[700px]:flex-row min-[700px]:items-start min-[700px]:text-left">
                 <img
                     src="/images/profile/profile-photo_web.jpg"
@@ -189,7 +193,7 @@ import Footer from "../components/Footer.astro";
                 />
 
                 <div class="min-w-0">
-                    <h2 class="inter-medium text-xl min-[700px]:text-2xl">
+                    <h2 class="inter-medium text-xl min-[700px]:text-2xl min-[1200px]:text-3xl">
                         I've worked on projects for brands and media companies
                         including
                         <span class="text-accent">
@@ -197,7 +201,7 @@ import Footer from "../components/Footer.astro";
                         </span>
                     </h2>
 
-                    <h2 class="inter-light mt-4 text-base leading-6 min-[700px]:mt-5 min-[700px]:text-xl min-[700px]:leading-7">
+                    <h2 class="inter-light mt-4 text-base leading-6 min-[700px]:mt-5 min-[700px]:text-xl min-[700px]:leading-7 min-[1200px]:text-2xl min-[1200px]:leading-9">
                         Over the years, I've collaborated with creative teams
                         across campaigns, branding and visual experiences.
                     </h2>
@@ -206,13 +210,226 @@ import Footer from "../components/Footer.astro";
         </section>
     </main>
 
+    <!-- Shared project modal -->
+    <ProjectModal />
+
     <Footer />
 </Layout>
+
 <script>
     const preview = document.querySelector("#project-preview");
     const previewImage = document.querySelector("#project-preview-image");
     const projectList = document.querySelector("#selected-projects-list");
+    const modal = document.querySelector("#project-modal");
+    const closeButton = document.querySelector("#close-project-modal");
+    const modalContent = document.querySelector("#project-modal-content");
+    const mediaContainer = document.querySelector("#modal-project-media");
+
     const projects = projectList?.querySelectorAll("[data-project]");
+
+    // Project media used by the shared modal.
+    const projectMedia = {
+        "google-flow": [
+            { type: "youtube", id: "qr7c4TJrVWY" },
+            { type: "youtube", id: "onxkpbMdwbo" },
+            { type: "youtube", id: "hcLjtTf3uq8" },
+            { type: "youtube", id: "4fnjz3IjpvA" },
+            { type: "youtube", id: "lXEHSX7SJoc" },
+        ],
+
+        batman: [
+            { type: "vimeo", id: "888076477" },
+            {
+                type: "image",
+                src: "/images/projects/batman/4d63ef185296015.6560fe9a769f4.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/batman/bff084185296015.6560fe9a79a76.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/batman/c620cb185296015.6560fe9a7804d.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/batman/cf120a185296015.6560fe9a78b4f.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/batman/f7a5a0185296015.6560fe9a77528.webp",
+            },
+        ],
+
+        kubrick: [
+            { type: "vimeo", id: "727984737" },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/1bbb74147730225.62c79b2256a4f.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/4f536e147730225.62c79b22d7b9d.jpg",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/8c028147730225.62c79b22550be.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/9c86e4147730225.62c79b22d643d.jpg",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/25cc5f147730225.62c79b2254502.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/68a9e3147730225.62c79b22580b1.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/68ea75147730225.62c79b22d6c3d.jpg",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/8611d1147730225.62c79b2256119.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/9986b7147730225.62c79b257081.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/503077147730225.62c79b2257631.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/744703147730225.62c79b22558ef.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/d9081f147730225.62c79b22588ff.png",
+            },
+        ],
+
+        universal: [
+            { type: "vimeo", id: "888102358" },
+            {
+                type: "image",
+                src: "/images/projects/universal/4eea85185298751.65610b021d660.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/universal/5f9fbf185298751.65610b022002c.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/universal/dee00d185298751.65610b021e492.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/universal/e37e6f185298751.65610b021f012.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/universal/f99e7c185298751.65610b0220a71.webp",
+            },
+        ],
+
+        christmas: [
+            { type: "vimeo", id: "888226461" },
+            {
+                type: "image",
+                src: "/images/projects/christmas/1d2af6185333257.6561edeed4a6c.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/2b329d185333257.6561edeed3165.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/6e9250185333257.6561edeed10af.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/044d7a185333257.6561edeed2701.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/84ee37185333257.6561edeed3bb1.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/334e6f185333257.6561edeed1c19.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/b3b08a185333257.6561edeec86fb.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/b390fd185333257.6561edeed062e.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/b965d8185333257.6561edeed66dd.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/bcd6c6185333257.6561edeec6c5b.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/c20520185333257.6561edeed5796.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/cfb264185333257.6561edeecd12c.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/d58b85185333257.6561edeecf90b.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/e37bc7185333257.6561edeec97a2.png",
+            },
+        ],
+
+        planetarium: [
+            { type: "vimeo", id: "46104077" },
+            { type: "vimeo", id: "43431772" },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/4d96dd39767665.5606c0fb1e0a5.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/6c2a5e39767667.5606c2db907c2.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/38d64b39767685.5606c2dc4001e.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/44b3d839767687.5606c5e4e7b22.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/aaaf8c39767671.5606c0fb2cd79.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/eb083b39767669.5606c5e52d4e6.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/ee57ab39767683.5606c395f0bc4.webp",
+            },
+        ],
+    };
 
     const projectPreviews = {
         "google-flow": "https://img.youtube.com/vi/qr7c4TJrVWY/hqdefault.jpg",
@@ -226,6 +443,7 @@ import Footer from "../components/Footer.astro";
             "/images/projects/planetarium/4d96dd39767665.5606c0fb1e0a5.webp",
     };
 
+    // Floating preview follows the pointer over the project list.
     projects?.forEach((project) => {
         project.addEventListener("mouseenter", () => {
             const src = projectPreviews[project.dataset.project];
@@ -233,9 +451,7 @@ import Footer from "../components/Footer.astro";
             if (!src || !preview || !previewImage) return;
 
             previewImage.src = src;
-            previewImage.alt = `${
-                project.querySelector("h3")?.textContent?.trim() ?? "Project"
-            } preview`;
+            previewImage.alt = `${project.querySelector("h3")?.textContent?.trim() ?? "Project"} preview`;
 
             preview.classList.remove("hidden");
 
@@ -271,5 +487,113 @@ import Footer from "../components/Footer.astro";
             preview.classList.add("hidden");
         }, 200);
     });
+
+    // Open the shared project modal when a project is clicked.
+    projects?.forEach((project) => {
+        project.addEventListener("click", () => {
+            const title = project.querySelector("h3")?.textContent?.trim();
+            const description =
+                project.querySelector("p")?.textContent?.trim() ?? "";
+
+            if (!modal || !mediaContainer) return;
+
+            if (preview) {
+                preview.classList.add("hidden", "opacity-0");
+            }
+
+            const titleElement = modalContent?.querySelector(
+                "#modal-project-title",
+            );
+            const descriptionElement = modalContent?.querySelector(
+                "#modal-project-description",
+            );
+
+            if (titleElement && title) {
+                titleElement.textContent = title;
+            }
+
+            if (descriptionElement) {
+                descriptionElement.textContent = description;
+            }
+
+            mediaContainer.replaceChildren();
+
+            const mediaItems = projectMedia[project.dataset.project] ?? [];
+
+            mediaItems.forEach((item, index) => {
+                if (item.type === "image") {
+                    const img = document.createElement("img");
+                    img.src = item.src;
+                    img.alt = `${title ?? "Project"} - Image ${index + 1}`;
+                    img.className = "h-auto w-full";
+                    img.loading = "lazy";
+                    mediaContainer.appendChild(img);
+                    return;
+                }
+
+                const wrapper = document.createElement("div");
+                wrapper.className = "aspect-video w-full";
+
+                const iframe = document.createElement("iframe");
+
+                if (item.type === "youtube") {
+                    iframe.src = `https://www.youtube.com/embed/${item.id}`;
+                } else if (item.type === "vimeo") {
+                    iframe.src = `https://player.vimeo.com/video/${item.id}`;
+                } else {
+                    return;
+                }
+
+                iframe.title = `${title ?? "Project"} - Video ${index + 1}`;
+                iframe.className = "h-full w-full";
+                iframe.loading = "lazy";
+                iframe.allow = "autoplay; fullscreen; picture-in-picture";
+                iframe.referrerPolicy = "strict-origin-when-cross-origin";
+                iframe.allowFullscreen = true;
+
+                wrapper.appendChild(iframe);
+                mediaContainer.appendChild(wrapper);
+            });
+
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+
+            requestAnimationFrame(() => {
+                modal.classList.remove("opacity-0", "bg-black/0");
+                modal.classList.add("opacity-100", "bg-black/80");
+            });
+
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    function closeModal() {
+        modal?.classList.remove("opacity-100", "bg-black/80");
+        modal?.classList.add("opacity-0", "bg-black/0");
+
+        if (mediaContainer) {
+            mediaContainer.replaceChildren();
+        }
+
+        document.body.style.overflow = "";
+
+        setTimeout(() => {
+            modal?.classList.add("hidden");
+            modal?.classList.remove("flex");
+        }, 300);
+    }
+
+    closeButton?.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal?.classList.contains("hidden")) {
+            closeModal();
+        }
+    });
+
+    modal?.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
 </script>
-```
