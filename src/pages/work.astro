@@ -1,0 +1,722 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ProjectModal from "../components/ProjectModal.astro";
+---
+
+<Layout>
+    <Header />
+
+    <main class="min-h-screen bg-zinc-950 text-zinc-50">
+        <div
+            id="project-preview"
+            class="pointer-events-none fixed left-0 top-0 z-40 hidden w-[24.3rem] opacity-0 transition-opacity duration-200"
+        >
+            <img
+                id="project-preview-image"
+                src=""
+                alt=""
+                class="aspect-video w-full object-cover"
+            />
+        </div>
+        <section class="mx-auto w-[calc(100%-48px)] max-w-[1100px] pt-16 pb-12">
+            <!-- Work filters -->
+            <div class="flex gap-4 border-b border-zinc-800 pb-3">
+                <span class="titles-mono text-sm text-accent">All Work</span>
+                <!-- <span class="titles-mono text-sm text-muted">
+                    Selected Work
+                </span> -->
+            </div>
+
+            <!-- Project list -->
+            <div>
+                <!-- google flow -->
+                <article
+                    data-project="google-flow"
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">Google Flow Ads</h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        Showcasing the capabilities of Google's Flow through a
+                        series of videos highlighting its most important
+                        features and latest updates.
+                    </p>
+                </article>
+                <!-- batman -->
+                <article
+                    data-project="batman"
+                    data-description="Batman Sagas is a cinematic promotional piece created for Cinemax, merging the distinct visions of Tim Burton and Christopher Nolan through carefully edited sequences from their iconic Batman films. Enhanced with glitch effects and custom handcrafted typography, the project creates an immersive visual experience that celebrates the Dark Knight’s cinematic legacy. Its creative impact was recognized with two Promax Latin America awards and one Clio Award."
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">Batman Sagas</h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        Intricately merges the cinematic worlds of Tim Burton
+                        and Christopher Nolan, showcasing their distinct visions
+                        of the iconic Dark Knight.
+                    </p>
+                </article>
+                <!-- kubrick -->
+                <article
+                    data-project="kubrick"
+                    data-description="To recreate some of the most important scenes in the movies of Stanley Kubrick is not an easy task, but with a little use of creativity and simplification it is possible to make a proposal that encompasses the more iconic scenes.
+
+                    Make with blender, composed in After Effects, and sound mixed and compose with Soundbridge."
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">Kubrick Screenings</h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        A creative, simplified recreation of Stanley Kubrick's
+                        most iconic movie scenes.
+                    </p>
+                </article>
+                <!-- universal -->
+                <article
+                    data-project="universal"
+                    data-description="A dynamic 2D motion graphics promo created for Universal Channel, bringing together Chicago Med, Chicago P.D., and Chicago Fire through an immersive 2D projection developed in After Effects. The piece blends captivating visuals and fluid animation to connect the three series, capturing the intensity of Chicago’s medical professionals and first responders as they face the challenges of saving lives and protecting the city."
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">Universal Chicago</h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        Dive into the heartbeat of Chicago with the latest 2D
+                        motion graphic promo for Universal Channel's gripping
+                        medical drama series.
+                    </p>
+                </article>
+                <!-- christmas -->
+                <article
+                    data-project="christmas"
+                    data-description="Embark on a dazzling journey through the world of E Entertainment's 3D video production tailored for Latin America and Brazil, where the magic of the holiday season collides with the glamour of the network's most famous shows. Step into a larger-than-life advent calendar that unfolds into a mesmerizing spectacle, each compartment revealing snippets and highlights from E's iconic programs. From the red carpet allure of celebrity events to the juicy drama of reality TV, every video encapsulates the essence of E Entertainment's most beloved shows, transporting viewers into the heart of entertainment culture."
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">Christmas E!</h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        Embark on a dazzling journey through the world of E
+                        Entertainment's 3D video production tailored for Latin
+                        America and Brazil, where the magic of the holiday
+                        season collides with the glamour of the network's most
+                        famous shows.
+                    </p>
+                </article>
+                <!-- planetarium -->
+                <article
+                    data-project="planetarium"
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">
+                        Interactive Experience_Humboldt Planetarium
+                    </h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        Bringing the Humboldt Planetarium to Life Through
+                        Interactive Media.
+                    </p>
+                </article>
+                <!-- opticalia -->
+                <article
+                    data-project="opticalia"
+                    data-description="Step into the captivating world of eyewear through my 3D animated video series created for Opticalia. These visually stunning animations showcase a myriad of glasses mounts, each meticulously crafted to highlight unique features and styles. From contemporary designs to timeless classics, these videos not only promote Opticalia's diverse eyewear range but also underscore my expertise as a skilled 3D artist. Experience the fusion of artistry and technology in every frame, making this series an engaging testament to the precision and creativity I bring to the world of 3D animation."
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">Opticalia Art 3D</h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        Step into the captivating world of eyewear through my 3D
+                        animated video series created for Opticalia. These
+                        visually stunning animations showcase a myriad of
+                        glasses mounts, each meticulously crafted to highlight
+                        unique features and styles.
+                    </p>
+                </article>
+                <!-- toro                -->
+                <article
+                    data-project="toro"
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">
+                        Guillermo del Toro Birthday Tribute Promo
+                    </h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        Created a birthday tribute promo for Cinemax celebrating
+                        Guillermo del Toro by recreating iconic scenes from his
+                        films using 2D and 3D techniques.
+                    </p>
+                </article>
+                <!-- minds -->
+                <article
+                    data-project="minds"
+                    data-description="AXN · 2013 · Promax Latin America, Bronze Winner
+
+                    Promotional piece for Criminal Minds, built around the concept “Words can be lethal weapons.” The project explores the dark psychology of the series through hundreds of animated letters that transform into weapons, representing the destructive power of words.
+
+                    My role covered design, rigging, dynamics, texturing, lighting, animation, and compositing. Using Cinema 4D, I developed complex simulations with hundreds of interacting elements, optimizing dynamics and rendering workflows to meet tight deadlines. Final compositing was completed in After Effects.
+
+                    Credits: Original concept and production by Marisabel Torres. Design, animation, and compositing by Wilfred Hernández. Audio mastering and mixing by Valentina Duran."
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">Words as Weapons</h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        A dark, cinematic promo for Criminal Minds, transforming
+                        hundreds of animated letters into weapons to explore the
+                        destructive power of words. Created with Cinema 4D and
+                        After Effects, the project won Bronze at Promax Latin
+                        America.
+                    </p>
+                </article>
+                <!-- compositing -->
+                <article
+                    data-project="compositing"
+                    data-description="Project Breakdown · In Order of Appearance
+
+                    Transformers Combiners: Firefly
+                    Cloud simulation / Smoke and dust simulation / Pass compositing / Color grading
+
+                    Avengers: Captain America
+                    Bike smoke simulation / Compositing / Color grading
+
+                    Transformers Combiners: Superion
+                    Background design / Smoke and dust compositing / Pass compositing
+
+                    Transformers JD China
+                    Full compositing / Particle animation / Color grading
+
+                    Stereopicnic Bogotá 2016
+                    Pass compositing / Smoke simulation
+
+                    Transformers: Robots in Disguise
+                    Full compositing / 2D conversion from 3D / Particle animation
+
+                    Hasbro: Play Big
+                    Pass compositing / Color grading / Motion blur / Graphic elements
+
+                    Hasbro: Magic Box
+                    Full compositing / Smoke simulation
+
+                    Transformers Combiners: Menasor
+                    Background design and matte painting / Smoke and dust simulation / Pass compositing / Glass shatter simulation / Tracking
+
+                    Top Gear: Month Races Special
+                    Full content production
+
+                    BBC Earth Contest
+                    Full content production
+
+                    Nerf
+                    3D door intro
+
+                    Transformers Combiners: Firefly
+                    Cloud simulation / Smoke and dust simulation / Pass compositing / Color grading
+
+                    Aromatel
+                    Compositing / Color grading / Displacement effects on typography
+
+                    Play-Doh: Back to School
+                    All production except the monkey and dinosaur
+
+                    Transformers JD China
+                    Full compositing / Color grading
+
+                    Monopoly LATAM Challenge
+                    3D camera animation / Compositing
+
+                    Transformers Combiners: Defensor
+                    Background design / Smoke, dust, and jetpack fire simulations / Pass compositing / Masking and rotoscoping / 2D effects
+
+                    Transformers Combiners: Defensor
+                    Background design / 3D layout and prop and scene modeling / Optical flares / Pass compositing / Masking and rotoscoping
+
+                    Playskool Heroes
+                    Pass compositing / Tracking and masking / Base color"
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">Compositing Works</h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        An exploration into fluids, light and textures.
+                    </p>
+                </article>
+                <!-- murder -->
+                <article
+                    data-project="murder"
+                    data-description="How to Get Away with Murder - Especial Karla Souza - Graphic Package
+
+                    This spot is property of Sony Pictures Entertainment Networks. For evaluation purposes only.
+
+                    How to Get Away with Murder - Especial Karla Souza - Graphic Package
+                    Audio Mixing - Antonio Mosqueda.
+                    Video Editing - Arturo Duran.
+                    Producer - Esther Gómez.
+                    Art Director - Andrea García.
+                    Graphic Coordinator - Wilfred Hernandez.
+                    Graphic Coordinator - Elisa Ruiz.
+                    Regional Art Director - Sergio Moreno.
+                    Visual Concept - Marco Urdaneta.
+                    3D Concept & Intro Design - Roberto Carbonell.
+                    3D Animation & Lighting - Carlos Dordelly.
+                    Compositing - Andrea di Berardino and Carlos Dordelly.
+                    2D Animation & Lowbars Design - Andrea di Berardino."
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">
+                        How to Get Away With Murder - Especial Karla Souza
+                    </h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        How to Get Away with Murder - Especial Karla Souza -
+                        Graphic Package
+                    </p>
+                </article>
+                <!-- oasis -->
+                <article
+                    data-project="oasis"
+                    class="cursor-pointer border-b border-zinc-800 py-5"
+                >
+                    <h2 class="text-base font-bold">Oasis Blend</h2>
+                    <p class="mt-1 text-sm leading-5 text-muted">
+                        Product animation for Oasis Blend energy drink.
+                    </p>
+                </article>
+            </div>
+
+            <!-- Back to home -->
+            <div class="pt-6">
+                <a
+                    href="/"
+                    class="titles-mono text-sm text-accent hover:underline"
+                >
+                    &lt; Back to Home
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <ProjectModal />
+    <Footer />
+</Layout>
+
+<script>
+    const modal = document.querySelector("#project-modal");
+    const closeButton = document.querySelector("#close-project-modal");
+    const modalContent = document.querySelector("#project-modal-content");
+    const mediaContainer = document.querySelector("#modal-project-media");
+    const projects = document.querySelectorAll("[data-project]");
+
+    const preview = document.querySelector("#project-preview");
+    const previewImage = document.querySelector("#project-preview-image");
+    const projectList = projects[0]?.parentElement;
+
+    // Media assigned to each project.
+    const projectMedia = {
+        "google-flow": [
+            { type: "youtube", id: "qr7c4TJrVWY" },
+            { type: "youtube", id: "onxkpbMdwbo" },
+            { type: "youtube", id: "hcLjtTf3uq8" },
+            { type: "youtube", id: "4fnjz3IjpvA" },
+            { type: "youtube", id: "lXEHSX7SJoc" },
+        ],
+
+        batman: [
+            { type: "vimeo", id: "888076477" },
+            {
+                type: "image",
+                src: "/images/projects/batman/4d63ef185296015.6560fe9a769f4.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/batman/bff084185296015.6560fe9a79a76.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/batman/c620cb185296015.6560fe9a7804d.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/batman/cf120a185296015.6560fe9a78b4f.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/batman/f7a5a0185296015.6560fe9a77528.webp",
+            },
+        ],
+        kubrick: [
+            { type: "vimeo", id: "727984737" },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/1bbb74147730225.62c79b2256a4f.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/4f536e147730225.62c79b22d7b9d.jpg",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/8c028147730225.62c79b22550be.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/9c86e4147730225.62c79b22d643d.jpg",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/25cc5f147730225.62c79b2254502.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/68a9e3147730225.62c79b22580b1.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/68ea75147730225.62c79b22d6c3d.jpg",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/8611d1147730225.62c79b2256119.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/9986b7147730225.62c79b257081.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/503077147730225.62c79b2257631.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/744703147730225.62c79b22558ef.png",
+            },
+            {
+                type: "image",
+                src: "/images/projects/kubrick/d9081f147730225.62c79b22588ff.png",
+            },
+        ],
+        universal: [
+            { type: "vimeo", id: "888102358" },
+            {
+                type: "image",
+                src: "/images/projects/universal/4eea85185298751.65610b021d660.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/universal/5f9fbf185298751.65610b022002c.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/universal/dee00d185298751.65610b021e492.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/universal/e37e6f185298751.65610b021f012.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/universal/f99e7c185298751.65610b0220a71.webp",
+            },
+        ],
+        christmas: [
+            { type: "vimeo", id: "888226461" },
+
+            {
+                type: "image",
+                src: "/images/projects/christmas/1d2af6185333257.6561edeed4a6c.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/2b329d185333257.6561edeed3165.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/6e9250185333257.6561edeed10af.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/044d7a185333257.6561edeed2701.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/84ee37185333257.6561edeed3bb1.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/334e6f185333257.6561edeed1c19.png",
+            },
+
+            {
+                type: "image",
+                src: "/images/projects/christmas/b3b08a185333257.6561edeec86fb.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/b390fd185333257.6561edeed062e.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/b965d8185333257.6561edeed66dd.webp",
+            },
+
+            {
+                type: "image",
+                src: "/images/projects/christmas/bcd6c6185333257.6561edeec6c5b.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/c20520185333257.6561edeed5796.webp",
+            },
+
+            {
+                type: "image",
+                src: "/images/projects/christmas/cfb264185333257.6561edeecd12c.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/d58b85185333257.6561edeecf90b.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/christmas/e37bc7185333257.6561edeec97a2.png",
+            },
+        ],
+        planetarium: [
+            { type: "vimeo", id: "46104077" },
+            { type: "vimeo", id: "43431772" },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/4d96dd39767665.5606c0fb1e0a5.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/6c2a5e39767667.5606c2db907c2.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/38d64b39767685.5606c2dc4001e.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/44b3d839767687.5606c5e4e7b22.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/aaaf8c39767671.5606c0fb2cd79.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/eb083b39767669.5606c5e52d4e6.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/planetarium/ee57ab39767683.5606c395f0bc4.webp",
+            },
+        ],
+        opticalia: [
+            { type: "vimeo", id: "888230372" },
+            { type: "vimeo", id: "888230120" },
+            { type: "vimeo", id: "888229872" },
+            {
+                type: "image",
+                src: "/images/projects/opticalia/opticalia1.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/opticalia/opticalia2.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/opticalia/opticalia3.webp",
+            },
+            {
+                type: "image",
+                src: "/images/projects/opticalia/opticalia4.webp",
+            },
+        ],
+        toro: [
+            { type: "vimeo", id: "585936813" },
+            { type: "image", src: "/images/projects/toro/toro_01.png" },
+        ],
+        minds: [
+            { type: "vimeo", id: "60499273" },
+            { type: "vimeo", id: "60498686" },
+            { type: "vimeo", id: "60499273" },
+            { type: "image", src: "/images/projects/minds/minds1.webp" },
+            { type: "image", src: "/images/projects/minds/minds2.webp" },
+            { type: "image", src: "/images/projects/minds/minds3.webp" },
+            { type: "image", src: "/images/projects/minds/minds4.webp" },
+            { type: "image", src: "/images/projects/minds/minds5.png" },
+            { type: "image", src: "/images/projects/minds/minds5.webp" },
+            { type: "image", src: "/images/projects/minds/minds6.png" },
+            { type: "image", src: "/images/projects/minds/minds7.png" },
+            { type: "image", src: "/images/projects/minds/minds8.png" },
+        ],
+        compositing: [
+            { type: "vimeo", id: "226568208" },
+            {
+                type: "image",
+                src: "images/projects/compositing/compositing_01.png",
+            },
+        ],
+        murder: [
+            { type: "vimeo", id: "124543899" },
+            { type: "image", src: "images/projects/murder/murder_01.png" },
+        ],
+        oasis: [
+            { type: "vimeo", id: "930385229" },
+            { type: "image", src: "/images/projects/oasis/oasis1.webp" },
+            { type: "image", src: "/images/projects/oasis/oasis2.webp" },
+            { type: "image", src: "/images/projects/oasis/oasis3.webp" },
+            { type: "image", src: "/images/projects/oasis/oasis4.webp" },
+            { type: "image", src: "/images/projects/oasis/oasis5.webp" },
+        ],
+    };
+
+    projects.forEach((project) => {
+        project.addEventListener("mouseenter", () => {
+            const mediaItems = projectMedia[project.dataset.project] ?? [];
+            const image = mediaItems.find((item) => item.type === "image");
+            const youtube = mediaItems.find((item) => item.type === "youtube");
+
+            const src =
+                image?.src ??
+                (youtube
+                    ? `https://img.youtube.com/vi/${youtube.id}/hqdefault.jpg`
+                    : "");
+
+            if (!src || !preview || !previewImage) return;
+
+            previewImage.src = src;
+            previewImage.alt = `${project.querySelector("h2")?.textContent?.trim() ?? "Project"} preview`;
+
+            preview.classList.remove("hidden");
+            requestAnimationFrame(() => {
+                preview.classList.remove("opacity-0");
+            });
+        });
+    });
+
+    projectList?.addEventListener("mousemove", (event) => {
+        if (!preview || preview.classList.contains("hidden")) return;
+
+        const x = Math.min(event.clientX + 20, window.innerWidth - 410);
+        const y = Math.min(event.clientY + 20, window.innerHeight - 190);
+
+        preview.style.left = `${Math.max(12, x)}px`;
+        preview.style.top = `${Math.max(12, y)}px`;
+    });
+
+    projectList?.addEventListener("mouseleave", () => {
+        if (!preview) return;
+
+        preview.classList.add("opacity-0");
+        setTimeout(() => preview.classList.add("hidden"), 200);
+    });
+
+    projects.forEach((project) => {
+        project.addEventListener("click", () => {
+            const title = project.querySelector("h2")?.textContent?.trim();
+
+            if (preview) {
+                preview.classList.add("hidden", "opacity-0");
+            }
+
+            const description =
+                project.dataset.description ||
+                project.querySelector("p")?.textContent?.trim() ||
+                "";
+
+            const titleElement = modalContent?.querySelector(
+                "#modal-project-title",
+            );
+            const descriptionElement = modalContent?.querySelector(
+                "#modal-project-description",
+            );
+
+            if (titleElement && title) {
+                titleElement.textContent = title;
+            }
+
+            if (descriptionElement) {
+                descriptionElement.textContent = description;
+            }
+
+            // Clear previous media.
+            if (mediaContainer) {
+                mediaContainer.replaceChildren();
+
+                const mediaItems = projectMedia[project.dataset.project] ?? [];
+
+                mediaItems.forEach((item, index) => {
+                    // Display images.
+                    if (item.type === "image") {
+                        const img = document.createElement("img");
+                        img.src = item.src;
+                        img.alt = `${title ?? "Project"} - Image ${index + 1}`;
+                        img.className = "h-auto w-full";
+                        img.loading = "lazy";
+
+                        mediaContainer.appendChild(img);
+                        return;
+                    }
+
+                    // Display videos.
+                    const wrapper = document.createElement("div");
+                    wrapper.className = "aspect-video w-full";
+
+                    const iframe = document.createElement("iframe");
+
+                    if (item.type === "youtube") {
+                        iframe.src = `https://www.youtube.com/embed/${item.id}`;
+                    } else if (item.type === "vimeo") {
+                        iframe.src = `https://player.vimeo.com/video/${item.id}`;
+                    } else {
+                        return;
+                    }
+
+                    iframe.title = `${title ?? "Project"} - Video ${index + 1}`;
+                    iframe.className = "h-full w-full";
+                    iframe.loading = "lazy";
+                    iframe.allow = "autoplay; fullscreen; picture-in-picture";
+                    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+                    iframe.allowFullscreen = true;
+
+                    wrapper.appendChild(iframe);
+                    mediaContainer.appendChild(wrapper);
+                });
+            }
+
+            modal?.classList.remove("hidden");
+            modal?.classList.add("flex");
+
+            requestAnimationFrame(() => {
+                modal?.classList.remove("opacity-0", "bg-black/0");
+                modal?.classList.add("opacity-100", "bg-black/80");
+            });
+
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    function closeModal() {
+        modal?.classList.remove("opacity-100", "bg-black/80");
+        modal?.classList.add("opacity-0", "bg-black/0");
+
+        // Remove videos and images when closing.
+        if (mediaContainer) {
+            mediaContainer.replaceChildren();
+        }
+
+        document.body.style.overflow = "";
+
+        setTimeout(() => {
+            modal?.classList.add("hidden");
+            modal?.classList.remove("flex");
+        }, 300);
+    }
+
+    closeButton?.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal?.classList.contains("hidden")) {
+            closeModal();
+        }
+    });
+
+    modal?.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+</script>

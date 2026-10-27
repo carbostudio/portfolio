@@ -1,11 +1,275 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-	<Welcome />
+    <Header />
+
+    <main class="min-h-screen bg-zinc-950 text-zinc-50">
+        <!-- Floating project preview -->
+        <div
+            id="project-preview"
+            class="pointer-events-none fixed left-0 top-0 z-40 hidden w-72 opacity-0 transition-opacity duration-200"
+        >
+            <img
+                id="project-preview-image"
+                src=""
+                alt=""
+                class="aspect-video w-full object-cover"
+            />
+        </div>
+
+        <!-- Reel -->
+        <section class="flex justify-center px-4 pt-12 pb-0 min-[700px]:px-12 min-[700px]:pt-16 min-[1200px]:px-[150px] min-[1200px]:pt-20">
+            <video
+                class="h-auto w-full"
+                src="/video/reel-optimized.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+            ></video>
+        </section>
+
+        <!-- Introduction -->
+        <!-- Conserva aquí el bloque original de "Hi, I'm Roberto Carbonell"
+         con sus colores, tipografías y diagramación originales. -->
+
+        <section class="flex justify-center px-6 pt-8 min-[700px]:pt-12 min-[1200px]:pt-20">
+            <div class="text-center">
+                <h1 class="text-2xl min-[700px]:text-4xl min-[1200px]:text-5xl font-bold">
+                    Hi, I'm <span class="text-cyan-400">Roberto Carbonell</span>
+                </h1>
+
+                <h2 class="text-sm min-[700px]:text-lg min-[1200px]:text-2xl font-bold">
+                    Motion Designer, 3D Artist &amp; Creative Developer.
+                </h2>
+
+                <p class="mt-1 text-[10px] min-[700px]:text-sm text-zinc-400">
+                    I create motion, 3D and interactive visual experiences,
+                    <br />
+                    combining design, technology and storytelling.
+                </p>
+            </div>
+        </section>
+
+        <!-- Selected Works -->
+        <section class="mx-auto w-[calc(100%-48px)] max-w-[1100px] pt-12 min-[700px]:pt-20">
+            <h2 class="titles-mono text-sm text-accent">Selected Works</h2>
+            <div class="mt-3 border-b border-zinc-800"></div>
+
+            <div
+                id="selected-projects-list"
+                class="grid grid-cols-1 gap-x-0 min-[700px]:grid-cols-2 min-[700px]:gap-x-20"
+            >
+                <div>
+                    <article
+                        data-project="google-flow"
+                        class="cursor-pointer border-b border-zinc-800 py-4"
+                    >
+                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                            Google Flow Ads
+                        </h3>
+                        <p class="mt-1 text-sm text-zinc-400">
+                            Motion Design &amp; Animation
+                        </p>
+                    </article>
+
+                    <article
+                        data-project="batman"
+                        class="cursor-pointer border-b border-zinc-800 py-4"
+                    >
+                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                            Batman Sagas
+                        </h3>
+                        <p class="mt-1 text-sm text-zinc-400">
+                            Motion Design &amp; Compositing
+                        </p>
+                    </article>
+
+                    <article
+                        data-project="kubrick"
+                        class="cursor-pointer border-b border-zinc-800 py-4"
+                    >
+                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                            Kubrick Screenings
+                        </h3>
+                        <p class="mt-1 text-sm text-zinc-400">
+                            Design &amp; Animation
+                        </p>
+                    </article>
+                </div>
+
+                <div>
+                    <article
+                        data-project="universal"
+                        class="cursor-pointer border-b border-zinc-800 py-4"
+                    >
+                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                            Universal Chicago
+                        </h3>
+                        <p class="mt-1 text-sm text-zinc-400">Motion Design</p>
+                    </article>
+
+                    <article
+                        data-project="christmas"
+                        class="cursor-pointer border-b border-zinc-800 py-4"
+                    >
+                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                            Christmas E!
+                        </h3>
+                        <p class="mt-1 text-sm text-zinc-400">
+                            Branding &amp; Animation
+                        </p>
+                    </article>
+
+                    <article
+                        data-project="planetarium"
+                        class="cursor-pointer border-b border-zinc-800 py-4"
+                    >
+                        <h3 class="inter-medium text-base min-[700px]:text-lg">
+                            Humboldt Planetarium
+                        </h3>
+                        <p class="mt-1 text-sm text-zinc-400">
+                            Design &amp; Motion Graphics
+                        </p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <a
+                    href="/work"
+                    class="inline-block text-sm text-accent transition-opacity hover:opacity-70"
+                >
+                    All Work →
+                </a>
+            </div>
+        </section>
+
+        <!-- Capabilities & Tools -->
+        <section class="mx-auto w-[calc(100%-48px)] max-w-[1100px] pt-12 min-[700px]:pt-20">
+            <div class="grid grid-cols-1 gap-y-8 min-[700px]:grid-cols-2 min-[700px]:gap-x-20">
+                <div>
+                    <h2 class="titles-mono text-sm text-accent">
+                        Capabilities
+                    </h2>
+
+                    <ul class="mt-4 space-y-2 text-sm min-[700px]:text-base">
+                        <li>Motion Design</li>
+                        <li>3D &amp; Animation</li>
+                        <li>Compositing</li>
+                        <li>Creative Development</li>
+                        <li>Interactive Experiences</li>
+                    </ul>
+                </div>
+
+                <div class="text-left min-[700px]:text-right">
+                    <h2 class="titles-mono text-sm text-accent">Tools</h2>
+
+                    <ul class="mt-4 space-y-2 text-sm min-[700px]:text-base">
+                        <li>After Effects / Blender / Photoshop</li>
+                        <li>Illustrator / Figma / HTML / CSS</li>
+                        <li>Astro / JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Contact -->
+        <section class="mx-auto mt-16 w-[calc(100%-48px)] max-w-[1100px] pb-12 min-[700px]:mt-24 min-[700px]:pb-20">
+            <div class="flex flex-col items-center gap-5 text-center min-[700px]:flex-row min-[700px]:items-start min-[700px]:text-left">
+                <img
+                    src="/images/profile/profile-photo_web.jpg"
+                    alt="Portrait of Roberto Carbonell"
+                    class="h-auto w-full max-w-[234px] shrink-0 object-cover min-[700px]:h-[234px] min-[700px]:w-[234px]"
+                />
+
+                <div class="min-w-0">
+                    <h2 class="inter-medium text-xl min-[700px]:text-2xl">
+                        I've worked on projects for brands and media companies
+                        including
+                        <span class="text-accent">
+                            Google, HBO, Universal, Discovery and Nickelodeon.
+                        </span>
+                    </h2>
+
+                    <h2 class="inter-light mt-4 text-base leading-6 min-[700px]:mt-5 min-[700px]:text-xl min-[700px]:leading-7">
+                        Over the years, I've collaborated with creative teams
+                        across campaigns, branding and visual experiences.
+                    </h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
 </Layout>
+<script>
+    const preview = document.querySelector("#project-preview");
+    const previewImage = document.querySelector("#project-preview-image");
+    const projectList = document.querySelector("#selected-projects-list");
+    const projects = projectList?.querySelectorAll("[data-project]");
+
+    const projectPreviews = {
+        "google-flow": "https://img.youtube.com/vi/qr7c4TJrVWY/hqdefault.jpg",
+        batman: "/images/projects/batman/4d63ef185296015.6560fe9a769f4.webp",
+        kubrick: "/images/projects/kubrick/1bbb74147730225.62c79b2256a4f.png",
+        universal:
+            "/images/projects/universal/4eea85185298751.65610b021d660.webp",
+        christmas:
+            "/images/projects/christmas/1d2af6185333257.6561edeed4a6c.webp",
+        planetarium:
+            "/images/projects/planetarium/4d96dd39767665.5606c0fb1e0a5.webp",
+    };
+
+    projects?.forEach((project) => {
+        project.addEventListener("mouseenter", () => {
+            const src = projectPreviews[project.dataset.project];
+
+            if (!src || !preview || !previewImage) return;
+
+            previewImage.src = src;
+            previewImage.alt = `${
+                project.querySelector("h3")?.textContent?.trim() ?? "Project"
+            } preview`;
+
+            preview.classList.remove("hidden");
+
+            requestAnimationFrame(() => {
+                preview.classList.remove("opacity-0");
+            });
+        });
+    });
+
+    projectList?.addEventListener("mousemove", (event) => {
+        if (!preview || preview.classList.contains("hidden")) return;
+
+        const x = Math.max(
+            12,
+            Math.min(event.clientX + 20, window.innerWidth - 300),
+        );
+
+        const y = Math.max(
+            12,
+            Math.min(event.clientY + 20, window.innerHeight - 190),
+        );
+
+        preview.style.left = `${x}px`;
+        preview.style.top = `${y}px`;
+    });
+
+    projectList?.addEventListener("mouseleave", () => {
+        if (!preview) return;
+
+        preview.classList.add("opacity-0");
+
+        setTimeout(() => {
+            preview.classList.add("hidden");
+        }, 200);
+    });
+</script>
+```
